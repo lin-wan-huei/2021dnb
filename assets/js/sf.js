@@ -98,6 +98,7 @@ $(function(){
     }
 
     $('#sendBtn').click(function () {
+        var status = true;
 
         var last_name = $('#last_name').val().trim()
         var email = $('#email').val().trim()
@@ -121,11 +122,11 @@ $(function(){
         //備註欄位需加入!=='' （ note1 !== '' && note2 !== '' ）
         if (email !== '' && $Emailchecking2 == true && mobile !== '' && $mobile == true && last_name !== '' &&
             company !== '' && note1 !== '' && note2 !== '' && note3 !== undefined && $('#policy').is(':checked')) {
-            $('#sfBtn').click()
-            $('.sf_form').hide()
-            $('.tks').show()
+            // $('#sfBtn').click()
+            // $('.sf_form').hide()
+            // $('.tks').show()
         } else {
-
+            status = false
             //姓名驗證是否填寫
             if (last_name == '') {
                 $('.errorName,.errorSubmit')
@@ -271,7 +272,7 @@ $(function(){
             }
             // 呼叫 send ajax function
             send(data);
-            // $('.sf_form').hide();
+            $('.sf_form').hide();
             $(".tks").show();
         }
     });
@@ -282,8 +283,8 @@ function send(data){
     $.ajax({
         // 這邊用get type
         type: "get",
-        // api url - google appscript 產出的 url，sheet：https://docs.google.com/spreadsheets/d/16iIiHABFmhLkGofCsOBGa-8MuHdj63jKtClOi0Za6Lo/edit#gid=0
-        url: "https://script.google.com/macros/s/AKfycbzM-s-uwqjotwGaJEr7lBeKp_iUMWVYhgmgEtKR03EGqGkskA9b/exec",
+        // api url - google appscript 產出的 url，sheet：https://docs.google.com/spreadsheets/d/1v3A47EE42Ef7mMVc4ThDA81F4K3ps_fCM3EmpuV5T1I/edit#gid=0
+        url: "https://script.google.com/macros/s/AKfycbx4NBiB70YmxjvfjAz7cKKOhGKsjxLxIB40Q_6UHLEW5Yow4g1J/exec",
         // 剛剛整理好的資料帶入
         data: data,
         // 資料格式是JSON 
