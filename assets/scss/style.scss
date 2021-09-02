@@ -152,6 +152,9 @@ p{
     background: -webkit-linear-gradient(top,  rgba(25,184,221,1) 0%,rgba(13,92,111,1) 66%,rgba(13,92,111,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(25,184,221,1) 0%,rgba(13,92,111,1) 66%,rgba(13,92,111,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19b8dd', endColorstr='#0d5c6f',GradientType=0 ); /* IE6-9 */
+    @include mb-width_l(){
+      bottom: 0;
+    }
   }
   p{
     font-size: 20px;
@@ -169,7 +172,7 @@ p{
     position: absolute;
     top: 50%;
     left: 49%;
-    transform: translate(-40%, -58%);
+    transform: translate(-40%, -68%);
     width: 100%;
     max-width: 735px;
     height: auto;
@@ -184,11 +187,20 @@ p{
     @include pc-width_m(){
       transform: translate(-50%, -50%) scale(0.8);
     }
+    @include pc-width_s(){
+      transform: translate(-40%, -70%) scale(0.8);
+    }
+    @include pad-width(){
+      transform: translate(-40%, -93%) scale(0.6);
+    }
     @include mb-width_l(){
       transform: translate(-50%, -70%) scale(1);
     }
     @include mb-width_m(){
       transform: translate(-50%, -80%) scale(1);
+    }
+    @include mb-width_s(){
+      transform: translate(-50%, -90%) scale(1);
     }
     .mark{
       width: 20%;
@@ -272,25 +284,43 @@ p{
       @include mb-width_l(){
         transform: translate(-50%, -70%) scale(1);
       }
+      @include mb-width_m(){
+        transform: translate(-50%, -88%) scale(1);
+      }
+      @include mb-width_s(){
+        transform: translate(-50%, -100%) scale(1);
+      }
     }
   }
   &__down{
     position: absolute;
     top: inherit;
     left: 50%;
-    bottom: 15%;
+    bottom: 20%;
     transform: translate(-50%, -50%);
     width: 2%;
     height: auto;
     z-index: 5;
+    @include pad-width(){
+      bottom: 40%;
+    }
     @include mb-width_l(){
       width: 5%;
       bottom: 30%;
     }
     &--b{
-      bottom: 15%;
+      bottom: 20%;
+      @include pad-width(){
+        bottom: 40%;
+      }
       @include mb-width_l(){
-        bottom: 20%;
+        bottom: 24%;
+      }
+      @include mb-width_m(){
+        bottom: 30%;
+      }
+      @include mb-width_s(){
+        bottom: 38%;
       }
     }
   }
@@ -377,6 +407,12 @@ p{
           margin: 0 5px;
           font-size: 12px;
           font-family: "Noto Sans TC", sans-serif;
+          ul{
+            flex-wrap: wrap;
+            li{
+              margin: 7px 5px;
+            }
+          }
           img{
             width: auto;
             height: 25px;
@@ -939,7 +975,7 @@ a.forum_btn{
     max-width: 1160px;
     margin: 70px auto 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     @include mb-width_l(){
@@ -947,7 +983,7 @@ a.forum_btn{
     }
     .speaker{
       width: 25%;
-      margin: 0 0 20px;
+      margin: 0 0 50px;
       @include mb-width_l(){
         width: 50%;
         margin: 30px auto;
@@ -1274,13 +1310,25 @@ a.forum_btn{
     position: absolute;
     top: inherit;
     left: 50%;
-    bottom: 20%;
+    bottom: 25%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
     z-index: 5;
     @include pc-width_s(){
       bottom: 25%;
+    }
+    @include pad-width(){
+      bottom: 45%;
+    }
+    @include mb-width_l(){
+      bottom: 27%;
+    }
+    @include mb-width_m(){
+      bottom: 36%;
+    }
+    @include mb-width_s(){
+      bottom: 43%;
     }
   h4{
     color: #fff;

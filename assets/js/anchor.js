@@ -1,5 +1,13 @@
 $(function(){   
 
+    $(".go_survey").click(function(){
+      $("html,body").animate(
+        { scrollTop: $("#survey").offset().top + 1 },
+        900
+      );
+      return false;
+    });
+    
     $(".part1").click(function(){
       window.location="https://event.cw.com.tw/2021dnb/index.html#forum";
       // $("html,body").animate(
