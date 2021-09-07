@@ -204,7 +204,7 @@ footer {     z-index: 7;
     width: 100%; display: block; text-align: center; background-color: #363636; padding: 62px 0; z-index: 6;}
 footer a{  display: inline; color: #fff; text-decoration: underline; }
 footer p {  font-size: 14px; font-family: "Noto Sans TC",sans-serif ; font-weight: 100;line-height: 28px; color: #fff;}
-  @media all and (max-width: 769px) {
+@media all and (max-width: 769px) {
     footer { 
         padding: 30px 10px 80px;
         font-size: 12px;
@@ -212,8 +212,17 @@ footer p {  font-size: 14px; font-family: "Noto Sans TC",sans-serif ; font-weigh
     footer p {
       line-height: 22px;
     }
-  }
+}
 .body_fixed{
 overflow: hidden;
 width: 100%;
+}
+@media all and (max-width: 769px) {
+    header .menu--edm{
+        align-content: flex-start;
+    }
+    header .menu--edm li{
+        width: 60%;
+        margin: 20px;
+    }
 }

@@ -71,6 +71,31 @@ $(function(){
     });
     // 以上：在手機版時，選單加入class="co"，且點擊co之後收起選單等等
 
+    // edm header
+    $(".part1--edm").click(function(){
+      $("html,body").animate(
+        { scrollTop: $("#forum").offset().top + 1 },
+        900
+      );
+      return false;
+    });
+
+    $(".part2--edm").click(function(){
+      $("html,body").animate(
+        { scrollTop: $("#speakers").offset().top + 1 },
+        900
+      );
+      return false;
+    });
+
+    $(".part3--edm").click(function(){
+      $("html,body").animate(
+        { scrollTop: $("#survey").offset().top + 1 },
+        900
+      );
+      return false;
+    });
+
 });
 
 

@@ -389,6 +389,17 @@ select {
   width: 90%;
   margin: auto;
 }
+.tks p{
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 2.6rem;
+}
+.tks p a{
+  display: inline-block;
+  color: #1a4dad;
+  text-decoration: underline;
+}
 
 input[type='text'],
 textarea,
